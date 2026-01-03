@@ -1,0 +1,12 @@
+/* Ensure page fills viewport and uses column layout */
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Let the main content grow to fill available space */
+.content {
+    flex: 1 0 auto;
+    /* grow, no shrink, auto basis */
+}

@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+/* Dark theme variables (GitHub-like palette) */
+:root {
+    --bg: #0d1117;
+    /* page background */
+    --panel: #010409;
+    /* darker surface */
+    --text: #c9d1d9;
+    /* primary text */
+    --muted: #8b949e;
+    /* secondary text */
+    --link: #2dd4bf;
+    /* teal accent */
+    --link-600: #22c1a0;
+    /* hover/darker */
+    /* primary accent */
+    --border: rgba(255, 255, 255, 0.06);
+    --box-shadow: 0 8px 24px rgba(2, 6, 23, 0.6);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* Basic element tweaks */
+body,
+app-root {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+a {
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--link-600);
+    text-decoration: underline;
+}
+
+/* utility: panels */
+.panel {
+    background: var(--panel);
+    color: var(--text);
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border);
+}
