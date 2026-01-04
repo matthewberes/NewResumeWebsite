@@ -1,3 +1,41 @@
+.content {
+    margin: 0 1rem;
+    display: flex;
+}
+
+.headshot {
+    width: 22%;
+    min-width: 350px;
+    height: auto;
+    border-radius: 6px;
+    margin: 10px 0;
+    background: transparent;
+
+    /* soften bright photos */
+    object-fit: cover;
+    filter: brightness(0.88) saturate(0.78) contrast(0.96) grayscale(6%);
+}
+
+.textbox {
+    flex: 1;
+    margin-left: 1.5rem;
+}
+
+h2 {
+    font-size: 20pt;
+    margin-bottom: 0;
+}
+
+.subheader {
+    font-size: 16pt;
+    margin: 0 0 25px;
+}
+
+p,
+li {
+    font-size: 14pt;
+}
+
 .progress-bars {
     display: flex;
     justify-content: space-between;
@@ -11,4 +49,30 @@
 
 h3 {
     margin-left: 1rem;
+}
+
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headshot {
+        width: 60%;
+        min-width: unset;
+        margin: 0 0 20px 0;
+    }
+
+    .textbox {
+        margin-left: 0;
+    }
+
+    .progress-bars {
+        flex-direction: column;
+    }
+
+    .web,
+    .app {
+        width: 100%;
+    }
 }
