@@ -26,8 +26,8 @@
 }
 
 .footer-brand .download {
-    display: inline-block;
-    margin-top: 6px;
+    display: block;
+    margin-top: 14px;
     background: transparent;
     color: var(--link);
     border-radius: 6px;
@@ -98,12 +98,23 @@
         align-items: stretch;
     }
 
+    .footer-brand {
+        margin: auto;
+    }
+
+    a {
+        display: block;
+        width: fit-content;
+        margin: auto;
+    }
+
     .footer-contact {
-        align-items: flex-start;
+        align-items: center;
     }
 
     .footer-bottom {
         flex-direction: column;
         gap: 6px;
+        align-items: center;
     }
 }

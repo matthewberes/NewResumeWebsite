@@ -1,0 +1,14 @@
+.progress-bars {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.web,
+.app {
+    width: 50%;
+}
+
+h3 {
+    margin-left: 1rem;
+}

@@ -1,0 +1,15 @@
+<div class="progress-row">
+    <img *ngIf="img" [src]="img" [alt]="label || 'logo'" class="logo" />
+
+    <div class="progress-body">
+        <div class="label-row">
+            <span class="label">{{ label }}</span>
+            <span class="percent">{{ pct }}%</span>
+        </div>
+
+        <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" [attr.aria-valuenow]="pct"
+            [style.--pct]="pct + '%'" [style.--dur]="duration">
+            <div class="fill" [class.animate]="animate" aria-hidden="true"></div>
+        </div>
+    </div>
+</div>

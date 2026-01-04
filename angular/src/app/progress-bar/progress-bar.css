@@ -1,0 +1,89 @@
+.progress-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    width: 98%;
+    margin: 1%
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 6px;
+    flex: 0 0 50px;
+    background: transparent;
+}
+
+.progress-body {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: var(--muted);
+}
+
+.label {
+    color: var(--text);
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.percent {
+    color: var(--muted);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.bar {
+    background: rgba(255, 255, 255, 0.03);
+    height: 15px;
+    border-radius: 999px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fill {
+    height: 100%;
+    width: var(--pct, 0%);
+    background: linear-gradient(90deg, var(--link), var(--link-600));
+    border-radius: inherit;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.fill.animate {
+    animation: grow var(--dur, 1s) cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes grow {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* small screens */
+@media (max-width: 420px) {
+    .label-row {
+        font-size: 12px;
+    }
+
+    .logo {
+        width: 28px;
+        height: 28px;
+        flex: 0 0 28px;
+    }
+}

@@ -1,1 +1,20 @@
 <p>home works!</p>
+
+<div class="progress-bars">
+    <div class="web">
+        <h3>Web-based languages</h3>
+        <app-progress-bar [label]="'HTML'" [percentage]="90" [img]="'/assets/html.png'"></app-progress-bar>
+        <app-progress-bar [label]="'JavaScript'" [percentage]="90" [img]="'/assets/javascript.png'"></app-progress-bar>
+        <app-progress-bar [label]="'CSS'" [percentage]="85" [img]="'/assets/css.png'"></app-progress-bar>
+        <app-progress-bar [label]="'Angular'" [percentage]="80" [img]="'/assets/angular.png'"></app-progress-bar>
+        <app-progress-bar [label]="'RXJS'" [percentage]="70" [img]="'/assets/rxjs.png'"></app-progress-bar>
+    </div>
+    <div class="app">
+        <h3>Application-based languages</h3>
+        <app-progress-bar [label]="'Java'" [percentage]="90" [img]="'/assets/java.png'"></app-progress-bar>
+        <app-progress-bar [label]="'Python'" [percentage]="85" [img]="'/assets/python.png'"></app-progress-bar>
+        <app-progress-bar [label]="'C#'" [percentage]="75" [img]="'/assets/csharp.png'"></app-progress-bar>
+        <app-progress-bar [label]="'C'" [percentage]="60" [img]="'/assets/c.png'"></app-progress-bar>
+        <app-progress-bar [label]="'R'" [percentage]="50" [img]="'/assets/r.png'"></app-progress-bar>
+    </div>
+</div>
