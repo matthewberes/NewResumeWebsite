@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    background: var(--panel);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.35);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.project-container img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 300ms ease;
+}
+
+.textbox {
+    width: 50%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.textbox h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: var(--text);
+}
+
+.textbox p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.project-links {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: var(--link);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.btn.ghost {
+    background: transparent;
+    color: var(--link);
+    border: 1px solid rgba(45, 212, 191, 0.12);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+/* alternate layout on larger screens */
+.project-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.projects-footer {
+    display: flex;
+    justify-content: center;
+    padding: 28px 12px 6px;
+}
+
+.github-cta {
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 12px;
+    color: var(--link);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(2, 6, 23, 0.45);
+    transition: transform 180ms ease, background 180ms ease;
+}
+
+.github-cta svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    fill: currentColor;
+}
+
+.github-cta:hover {
+    transform: translateY(-4px);
+    background: rgba(45, 212, 191, 0.06);
+}
+
+@media (max-width: 900px) {
+
+    .project-container,
+    .project-container:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .project-container img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .textbox {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 12px;
+        gap: 18px;
+    }
+
+    .project-container img {
+        height: 160px;
+    }
+
+    .textbox h2 {
+        font-size: 1.15rem;
+    }
+
+    .textbox p {
+        font-size: 0.95rem;
+    }
+
+    .github-cta {
+        padding: 10px 12px;
+        gap: 8px;
+        font-size: 0.95rem;
+    }
+}
