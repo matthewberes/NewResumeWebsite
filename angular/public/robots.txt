@@ -1,0 +1,10 @@
+# Robots policy
+# Allow all crawlers; point them to the sitemap. Replace the example domain with your live site domain.
+User-agent: *
+Allow: /
+
+# Location of the sitemap
+Sitemap: https://matthewberes.com/sitemap.xml
+
+# If you'd like to disallow staging or preview paths, add them here:
+# Disallow: /staging/
