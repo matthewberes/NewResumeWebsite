@@ -20,6 +20,10 @@ export class Header implements OnDestroy {
     });
   }
 
+  goHome() {
+    this.router.navigate(['/']);
+  }
+
   toggleMenu() {
     this.mobileMenuOpen = !this.mobileMenuOpen;
   }

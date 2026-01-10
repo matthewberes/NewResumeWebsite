@@ -10,10 +10,7 @@
     border-radius: 6px;
     margin: 10px 0;
     background: transparent;
-
-    /* soften bright photos */
     object-fit: cover;
-    filter: brightness(0.88) saturate(0.78) contrast(0.96) grayscale(6%);
 }
 
 .textbox {
@@ -40,6 +37,7 @@ li {
     display: flex;
     justify-content: space-between;
     gap: 16px;
+    margin-bottom: 1.5rem;
 }
 
 .web,

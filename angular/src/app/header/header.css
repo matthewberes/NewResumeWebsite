@@ -14,6 +14,10 @@
     text-decoration: none;
 }
 
+.header:hover {
+    cursor: pointer;
+}
+
 .menu-toggle {
     display: none;
     border: none;

@@ -2,8 +2,8 @@
     display: flex;
     gap: 12px;
     align-items: center;
-    width: 98%;
-    margin: 1%
+    width: 97%;
+    margin: 0 2% 0 1%
 }
 
 .logo {

@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { Resume } from './resume/resume';
 import { Projects } from './projects/projects';
 import { Home } from './home/home';
 
@@ -13,7 +12,4 @@ export const routes: Routes = [
     {
         path: 'projects', component: Projects, title: 'Matthew Beres - Projects'
     },
-    {
-        path: 'resume', component: Resume, title: 'Matthew Beres - Resume'
-    }
 ];
