@@ -1,0 +1,21 @@
+<div class="not-found">
+    <div class="panel">
+        <svg class="graphic" viewBox="0 0 64 64" aria-hidden="true" role="img">
+            <g fill="none" stroke="var(--link)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 46a12 12 0 0 1 0-17l6-6" />
+                <path d="M46 18a12 12 0 0 1 0 17l-6 6" />
+                <path d="M29 35l6-6" />
+            </g>
+        </svg>
+
+        <h1 class="code">404</h1>
+        <h2 class="title">Page not found</h2>
+        <p class="message">Sorry — we couldn't find the page you were looking for. It may have been moved or removed.
+        </p>
+
+        <div class="actions">
+            <a [routerLink]="['/']" class="btn">Take me home</a>
+            <a [routerLink]="['/projects/']" class="btn secondary">See projects</a>
+        </div>
+    </div>
+</div>
