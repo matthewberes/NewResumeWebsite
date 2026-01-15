@@ -16,7 +16,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "prerender": true,
+            "index": "src/index.html",
             "baseHref": "/",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
@@ -49,12 +49,14 @@
                   "maximumWarning": "4kB",
                   "maximumError": "8kB"
                 }
-              ]
+              ],
+              "prerender": true
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "prerender": false
             }
           },
           "defaultConfiguration": "production"
@@ -70,16 +72,6 @@
             }
           },
           "defaultConfiguration": "development"
-        },
-        "prerender": {
-          "builder": "@angular/build:prerender",
-          "options": {
-            "routes": [
-              "/",
-              "/home",
-              "/projects"
-            ]
-          }
         },
         "test": {
           "builder": "@angular/build:unit-test"
